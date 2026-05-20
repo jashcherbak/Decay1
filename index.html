@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decay | Dark Fantasy 2D</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Атмосферные готические шрифты -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Cinzel:wght@400;700&family=MedievalSharp&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">DECAY</div>
+            
+            <!-- Кнопка бургера для мобильных -->
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">Об игре</a></li>
+                <li><a href="#media">Медиа</a></li>
+                <li><a href="Decay.zip" download class="nav-download">Скачать игру</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <!-- Фоновое видео: без звука, зациклено, запускается само -->
+        <video autoplay loop muted playsinline class="hero-video">
+            <source src="video.mp4" type="video/mp4">
+        </video>
+
+        <div class="hero-content">
+            <h1 class="fade-in-hero">Тьма поглотит тебя</h1>
+            <p class="fade-in-hero delay">Погрузитесь в мир готического безумия в новом 2D экшен-выживании.</p>
+            <a href="game-build.zip" download class="cta-button">Присоединиться к битве</a>
+        </div>
+    </section>
+
+    <!-- Секция ОБ ИГРЕ -->
+    <section id="about" class="about-section">
+        <div class="about-container hidden">
+            <div class="about-text">
+                <h2>Оскверненные земли ждут</h2>
+                <p>Ваше путешествие начнется в проклятом лесу. Сражайтесь с порождениями ночи, решите судьбу этого мира.</p>
+            </div>
+            <div class="about-image">
+                <div class="video-container">
+                    <!-- Интерактивное видео с обложкой main-shot.jpg -->
+                    <video id="about-video" src="game-trailer.mp4" poster="main-shot.jpg" playsinline class="img-border"></video>
+                    
+                    <!-- Кастомная кнопка запуска в стиле Dark Fantasy -->
+                    <button class="play-button" id="play-button" aria-label="Воспроизвести видео">
+                        <svg viewBox="0 0 24 24" class="play-icon">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция МЕДИА -->
+    <section id="media" class="media-section">
+        <h2 class="section-title">Галерея кошмаров</h2>
+        <div class="gallery">
+            <div class="media-item hidden"><img src="screen1.jpg" alt="Медиа 1"></div>
+            <div class="media-item hidden"><img src="screen2.jpg" alt="Медиа 2"></div>
+            <div class="media-item hidden"><img src="screen3.jpg" alt="Медиа 3"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
